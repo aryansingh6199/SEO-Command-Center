@@ -81,3 +81,43 @@ Core Components:
 * fixer.py: Generates title, meta description, and redirect recommendations.
 * server.py: Coordinates loading, detection, fixing, reporting, and dashboard updates.
 * run.py: Executes the complete audit workflow from a single command.
+## Detection Engine
+
+The detection engine processes Screaming Frog crawl exports and evaluates deterministic SEO rules against each URL.
+
+Implemented Rule Categories:
+
+* Title Issues
+
+  * Missing Titles
+  * Duplicate Titles
+  * Long Titles
+  * Short Titles
+
+* Meta Description Issues
+
+  * Missing Meta Descriptions
+  * Duplicate Meta Descriptions
+  * Long Meta Descriptions
+
+* Content Issues
+
+  * Missing H1 Tags
+  * Duplicate H1 Tags
+  * Thin Content
+
+* Technical SEO Issues
+
+  * Broken Links
+  * Server Errors
+  * Redirects
+  * Redirect Chains
+  * Slow Pages
+
+* Site Structure Issues
+
+  * Orphan Pages
+  * Non-Indexable but Linked Pages
+
+All rules are implemented according to the Forge Sprint 01 rulebook and produce standardized issue objects with severity, affected URLs, counts, and explanations.
+
