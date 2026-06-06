@@ -1263,6 +1263,6 @@
   "run_meta": {
     "model": "qwen3.5:9b",
     "model_calls": 0,
-    "duration_sec": 0.5
+    "duration_sec": 0.4
   }
 }
