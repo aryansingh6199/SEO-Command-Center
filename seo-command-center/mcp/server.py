@@ -101,6 +101,7 @@ def seo_fix() -> dict:
 
     RUN["fixes"] = {
         "titles": content["titles"],
+        "metas": content["metas"],
         "redirect_map": redirects
     }
     _emit("fixes", RUN["fixes"])
