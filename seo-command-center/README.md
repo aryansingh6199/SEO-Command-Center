@@ -120,4 +120,39 @@ Implemented Rule Categories:
   * Non-Indexable but Linked Pages
 
 All rules are implemented according to the Forge Sprint 01 rulebook and produce standardized issue objects with severity, affected URLs, counts, and explanations.
+## Automated Fix Generation
+
+In addition to detecting issues, the system generates remediation recommendations.
+
+### Title Fixes
+
+For title-related issues, the fixer generates optimized title suggestions using page context and H1 information.
+
+Output format:
+
+```json
+{
+  "url": "...",
+  "old": "...",
+  "new": "..."
+}
+```
+
+### Meta Description Fixes
+
+For missing or problematic meta descriptions, the fixer generates SEO-friendly descriptions while respecting common length constraints.
+
+### Redirect Recommendations
+
+For broken URLs, the system identifies the closest matching live page and recommends a redirect target.
+
+Output format:
+
+```json
+{
+  "from": "...",
+  "to": "...",
+  "reason": "Closest structural match"
+}
+```
 
