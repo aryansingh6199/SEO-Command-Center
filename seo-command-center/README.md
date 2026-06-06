@@ -64,3 +64,20 @@ use a tool-trained model (`qwen3.5:9b` or `gemma4:31b-cloud`), not `qwen2.5-code
 ## Note
 The dashboard renders the operator's own crawl data on localhost; it is a local cockpit,
 not a hardened public server. The shareable artifact is the exported `report.html`.
+## Architecture
+
+The SEO Command Center follows a pipeline architecture:
+
+Screaming Frog Export (internal_all.csv)
+→ Detector Engine
+→ Issue Prioritization
+→ Fix Generation
+→ Report Generation
+→ Dashboard Visualization
+
+Core Components:
+
+* detector.py: Implements all rulebook-defined SEO detection rules.
+* fixer.py: Generates title, meta description, and redirect recommendations.
+* server.py: Coordinates loading, detection, fixing, reporting, and dashboard updates.
+* run.py: Executes the complete audit workflow from a single command.
