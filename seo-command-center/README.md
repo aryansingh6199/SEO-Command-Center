@@ -155,4 +155,29 @@ Output format:
   "reason": "Closest structural match"
 }
 ```
+## Testing and Validation
+
+The project was validated using the provided sample Screaming Frog export.
+
+Validation steps:
+
+1. Load crawl export data.
+2. Execute the detection pipeline.
+3. Verify all rulebook-defined issues are detected.
+4. Generate title, meta description, and redirect recommendations.
+5. Generate report.json and report.html.
+6. Verify successful end-to-end execution with no runtime errors.
+
+Example command:
+
+```bash
+python seo-command-center/run.py sample-export/
+```
+
+Expected outputs:
+
+* outputs/report.json
+* outputs/report.html
+
+The generated reports contain issue summaries, severity breakdowns, recommendations, and automated fixes.
 
